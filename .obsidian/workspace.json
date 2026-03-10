@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "abb3228060d0cc91",
+    "type": "split",
+    "children": [
+      {
+        "id": "609809c1efea88d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae0506d4dffd439f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "agentic-sdlc-blueprint.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "agentic-sdlc-blueprint"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8171615185f718dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "47e9f12c6c58646d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "07d5fe1f2ee2d5be",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9d30e6dd2f8d2c87",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "50f7db4533af7389",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d07735f143762cc8",
+    "type": "split",
+    "children": [
+      {
+        "id": "47bd6e7689533779",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "908efa5ffef1c61b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "agentic-sdlc-blueprint.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for agentic-sdlc-blueprint"
+            }
+          },
+          {
+            "id": "322fc4e3311bafa8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "agentic-sdlc-blueprint.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from agentic-sdlc-blueprint"
+            }
+          },
+          {
+            "id": "9df26c1ff175c282",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3d6a555b8262344c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "695ff3737015f909",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "agentic-sdlc-blueprint.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of agentic-sdlc-blueprint"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ae0506d4dffd439f",
+  "lastOpenFiles": [
+    "archive/append-only-scratchpad.md",
+    "agentic-sdlc-blueprint.md",
+    "draft-blueprint-v1.md",
+    "archive/dump-toolchain.md",
+    "archive/dump-Grok4.2.md",
+    "archive/dump-Gemini3.1.md",
+    "archive/dump-Gemini3.1-SDLC.md",
+    "archive",
+    "draft-blueprint-v1 1.md",
+    "dump-Gemini3.1.md",
+    "dump-Gemini3.1-SDLC.md",
+    "dump-Grok4.2.md",
+    "dump-toolchain.md",
+    "Welcome.md"
+  ]
+}
