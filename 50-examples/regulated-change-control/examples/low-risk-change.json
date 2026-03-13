@@ -1,0 +1,19 @@
+{
+  "system": "ledger",
+  "objective": "Clarify an internal control note",
+  "branch": "docs/internal-control-note",
+  "owner": "platform-team",
+  "target_environment": "dev",
+  "change_type": "config",
+  "data_class": "internal",
+  "acceptance_criteria": [
+    "Control note is updated",
+    "No runtime behavior changes"
+  ],
+  "risk_level": "low",
+  "touches_sensitive_data": false,
+  "changes_policy": false,
+  "vendor_impact": false,
+  "rollback_ready": false,
+  "evidence": []
+}

@@ -1,0 +1,6 @@
+* @service-team
+
+/service_app/ @service-team
+/tests/ @service-team
+/ENVIRONMENTS.md @release-team
+/SLOS.md @sre-team

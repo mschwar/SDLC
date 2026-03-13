@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Post-merge: refresh your understanding of repo boundaries if REPO_MAP.md changed. ==="

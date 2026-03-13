@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Post-commit: confirm whether review or compliance evidence should be attached to the PR. ==="

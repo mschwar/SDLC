@@ -1,0 +1,23 @@
+{
+  "system": "ledger",
+  "objective": "Ship a restricted production schema and policy update",
+  "branch": "feat/restricted-schema-policy-update",
+  "owner": "platform-team",
+  "target_environment": "prod",
+  "change_type": "schema",
+  "data_class": "restricted",
+  "acceptance_criteria": [
+    "Schema migration is reversible",
+    "Policy updates are documented",
+    "Approvals are attached"
+  ],
+  "risk_level": "high",
+  "touches_sensitive_data": true,
+  "changes_policy": true,
+  "vendor_impact": true,
+  "rollback_ready": true,
+  "evidence": [
+    "tests",
+    "risk-assessment"
+  ]
+}

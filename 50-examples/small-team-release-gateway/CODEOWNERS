@@ -1,0 +1,7 @@
+* @release-team
+
+/release_gateway/ @platform-team
+/tests/ @platform-team
+/THREAT_MODEL.md @security-team
+/ENVIRONMENTS.md @release-team
+/SLOS.md @sre-team

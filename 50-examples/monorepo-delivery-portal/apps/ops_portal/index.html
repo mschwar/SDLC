@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delivery Portal</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Monorepo Delivery Portal</p>
+        <h1>Release surfaces aligned around one shared contract.</h1>
+        <p class="lede">
+          The dashboard renders delivery work items from the API so frontend, backend, and shared schema
+          stay tied to the same truth.
+        </p>
+      </section>
+
+      <section class="summary-grid" id="summary-grid">
+        <article class="summary-card">
+          <h2>Total</h2>
+          <p id="total-items">--</p>
+        </article>
+        <article class="summary-card">
+          <h2>High Risk</h2>
+          <p id="high-risk-count">--</p>
+        </article>
+        <article class="summary-card">
+          <h2>Blocked</h2>
+          <p id="blocked-count">--</p>
+        </article>
+        <article class="summary-card">
+          <h2>Runbook Gaps</h2>
+          <p id="runbook-gap-count">--</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Work Items</h2>
+          <p>Directly sourced from <code>/api/work-items</code>.</p>
+        </div>
+        <div id="items-root" class="items-root"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

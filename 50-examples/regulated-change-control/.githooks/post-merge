@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Post-merge: review whether local audit or policy fixtures need to be refreshed. ==="

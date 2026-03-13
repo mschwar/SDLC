@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if git diff HEAD@{1} --name-only 2>/dev/null | grep -q "requirements.txt"; then
+    echo "requirements.txt changed. Review local environment setup."
+fi

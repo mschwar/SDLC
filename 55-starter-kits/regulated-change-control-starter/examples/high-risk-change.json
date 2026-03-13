@@ -1,0 +1,14 @@
+{
+  "objective": "Replace this fixture with a real high-risk regulated change",
+  "branch": "feat/replace-high-risk-change",
+  "target_environment": "prod",
+  "data_class": "restricted",
+  "acceptance_criteria": [
+    "Approvals are attached",
+    "Rollback plan exists"
+  ],
+  "risk_level": "high",
+  "touches_sensitive_data": true,
+  "changes_policy": true,
+  "rollback_ready": true
+}

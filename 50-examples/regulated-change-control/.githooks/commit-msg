@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MSG_FILE="$1"
+MSG=$(head -1 "$MSG_FILE")
+PATTERN='^(feat|fix|docs|chore|refactor|test|style|perf|ci|build|revert)(\(.+\))?: .+'
+
+if ! echo "$MSG" | grep -qE "$PATTERN"; then
+    echo "ERROR: Commit message does not follow conventional commit format."
+    echo "Expected: <type>(<scope>): <description>"
+    exit 1
+fi
+
+echo "=== Commit-msg: format OK ==="

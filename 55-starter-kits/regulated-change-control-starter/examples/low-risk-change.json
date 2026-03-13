@@ -1,0 +1,14 @@
+{
+  "objective": "Replace this fixture with a real low-risk change",
+  "branch": "docs/replace-low-risk-change",
+  "target_environment": "dev",
+  "data_class": "internal",
+  "acceptance_criteria": [
+    "Real controls are defined",
+    "Tests match the intended path"
+  ],
+  "risk_level": "low",
+  "touches_sensitive_data": false,
+  "changes_policy": false,
+  "rollback_ready": false
+}

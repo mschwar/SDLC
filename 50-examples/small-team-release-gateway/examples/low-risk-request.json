@@ -1,0 +1,20 @@
+{
+  "service": "release-gateway",
+  "objective": "Clarify an internal release note",
+  "branch": "docs/release-note-clarity",
+  "owner": "platform-team",
+  "environment": "dev",
+  "change_type": "docs",
+  "acceptance_criteria": [
+    "Release note wording is updated",
+    "No runtime behavior changes"
+  ],
+  "risk_level": "low",
+  "customer_visible": false,
+  "touches_auth": false,
+  "touches_schema": false,
+  "requires_migration": false,
+  "rollback_ready": false,
+  "needs_data_review": false,
+  "evidence": []
+}

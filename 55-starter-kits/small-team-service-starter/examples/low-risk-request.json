@@ -1,0 +1,12 @@
+{
+  "objective": "Replace this fixture with a real low-risk change",
+  "branch": "docs/replace-low-risk-fixture",
+  "environment": "dev",
+  "acceptance_criteria": [
+    "Contract is real",
+    "Tests reflect the intended path"
+  ],
+  "risk_level": "low",
+  "customer_visible": false,
+  "rollback_ready": false
+}

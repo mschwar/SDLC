@@ -1,0 +1,10 @@
+* @regulated-team
+
+/change_control/ @platform-team
+/tests/ @platform-team
+/CONTROL_OBJECTIVES.md @compliance-team
+/APPROVAL_MATRIX.md @compliance-team
+/DATA_CLASSIFICATION.md @privacy-team
+/SANDBOX_POLICY.md @security-team
+/AUDIT_LOG_POLICY.md @compliance-team
+/INCIDENT_RESPONSE.md @sre-team

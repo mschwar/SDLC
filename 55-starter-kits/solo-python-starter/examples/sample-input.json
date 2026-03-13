@@ -1,0 +1,9 @@
+{
+  "objective": "Replace this sample with your own task",
+  "branch": "feat/replace-sample",
+  "acceptance_criteria": [
+    "Real contract is defined",
+    "Tests cover the intended behavior"
+  ],
+  "risk_level": "medium"
+}

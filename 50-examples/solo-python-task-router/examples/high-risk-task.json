@@ -1,0 +1,14 @@
+{
+  "objective": "Change authentication routing for release approvals",
+  "branch": "feat/auth-release-approval",
+  "acceptance_criteria": [
+    "The auth path enforces release approval checks",
+    "High-risk tasks require explicit human approval",
+    "Tests cover the new routing behavior"
+  ],
+  "risk_level": "high",
+  "touches_auth": true,
+  "needs_production_access": true,
+  "requires_ui_validation": false,
+  "tags": ["auth", "release", "high-risk"]
+}

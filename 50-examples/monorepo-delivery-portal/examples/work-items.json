@@ -1,0 +1,46 @@
+[
+  {
+    "id": "OPS-101",
+    "title": "Polish dashboard summary cards",
+    "owner": "frontend-team",
+    "area": "ops-portal",
+    "status": "ready",
+    "risk_level": "low",
+    "has_runbook": true,
+    "needs_migration": false,
+    "deployment_target": "staging"
+  },
+  {
+    "id": "OPS-202",
+    "title": "Ship rollout summary endpoint",
+    "owner": "platform-team",
+    "area": "delivery-api",
+    "status": "in-review",
+    "risk_level": "high",
+    "has_runbook": false,
+    "needs_migration": false,
+    "deployment_target": "prod"
+  },
+  {
+    "id": "OPS-301",
+    "title": "Repair migration guardrail",
+    "owner": "platform-team",
+    "area": "shared-contracts",
+    "status": "blocked",
+    "risk_level": "high",
+    "has_runbook": true,
+    "needs_migration": true,
+    "deployment_target": "prod"
+  },
+  {
+    "id": "OPS-401",
+    "title": "Stage repo-map cleanup",
+    "owner": "platform-team",
+    "area": "repo-docs",
+    "status": "queued",
+    "risk_level": "medium",
+    "has_runbook": true,
+    "needs_migration": false,
+    "deployment_target": "none"
+  }
+]

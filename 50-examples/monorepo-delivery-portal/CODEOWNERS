@@ -1,0 +1,8 @@
+* @platform-team
+
+/apps/ops_portal/ @frontend-team
+/services/delivery_api/ @platform-team
+/packages/shared_contracts/ @platform-team @frontend-team
+/REPO_MAP.md @platform-team
+/OWNERSHIP_MAP.md @platform-team
+/QA_STRATEGY.md @qa-team

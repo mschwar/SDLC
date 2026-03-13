@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+BRANCH=$(git branch --show-current)
+
+if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then
+    exit 0
+fi
+
+echo "=== Post-commit: pushing branch ==="
+git push -u origin "$BRANCH" 2>/dev/null || {
+    echo "WARNING: push failed. Push manually."
+    exit 0
+}
+
+EXISTING=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number' 2>/dev/null || true)
+if [ -z "$EXISTING" ]; then
+    echo "=== Post-commit: creating draft PR ==="
+    gh pr create --draft --fill 2>/dev/null || {
+        echo "WARNING: PR creation failed. Create manually."
+        exit 0
+    }
+fi

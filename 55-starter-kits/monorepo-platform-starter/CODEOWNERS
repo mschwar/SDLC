@@ -1,0 +1,5 @@
+* @platform-team
+
+/apps/web_portal/ @frontend-team
+/services/api_service/ @platform-team
+/packages/contracts/ @platform-team @frontend-team

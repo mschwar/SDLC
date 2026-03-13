@@ -1,0 +1,12 @@
+{
+  "objective": "Replace this fixture with a real high-risk release",
+  "branch": "feat/replace-high-risk-fixture",
+  "environment": "prod",
+  "acceptance_criteria": [
+    "Rollback plan exists",
+    "Tests cover the risky path"
+  ],
+  "risk_level": "high",
+  "customer_visible": true,
+  "rollback_ready": true
+}

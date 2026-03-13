@@ -1,0 +1,23 @@
+[
+  {
+    "id": "KIT-1",
+    "title": "Replace this fixture with a real item",
+    "owner": "frontend-team",
+    "status": "ready",
+    "risk_level": "low"
+  },
+  {
+    "id": "KIT-2",
+    "title": "Replace this fixture with a risky item",
+    "owner": "platform-team",
+    "status": "in-review",
+    "risk_level": "high"
+  },
+  {
+    "id": "KIT-3",
+    "title": "Replace this fixture with a blocked item",
+    "owner": "platform-team",
+    "status": "blocked",
+    "risk_level": "medium"
+  }
+]

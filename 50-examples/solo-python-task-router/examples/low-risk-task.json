@@ -1,0 +1,10 @@
+{
+  "objective": "Add a docs-only note to the examples index",
+  "branch": "docs/add-example-note",
+  "acceptance_criteria": [
+    "The new note is linked from the examples index",
+    "The note has frontmatter"
+  ],
+  "risk_level": "low",
+  "tags": ["docs", "examples"]
+}

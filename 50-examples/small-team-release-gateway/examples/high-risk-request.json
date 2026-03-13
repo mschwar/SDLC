@@ -1,0 +1,24 @@
+{
+  "service": "release-gateway",
+  "objective": "Ship a production auth and schema change",
+  "branch": "feat/prod-auth-schema-rollout",
+  "owner": "platform-team",
+  "environment": "prod",
+  "change_type": "schema",
+  "acceptance_criteria": [
+    "Auth flow is updated",
+    "Schema migration is reversible",
+    "Staging verification is complete"
+  ],
+  "risk_level": "high",
+  "customer_visible": true,
+  "touches_auth": true,
+  "touches_schema": true,
+  "requires_migration": true,
+  "rollback_ready": true,
+  "needs_data_review": true,
+  "evidence": [
+    "tests",
+    "staging-verification"
+  ]
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Post-commit: confirm that all touched paths are listed in the PR evidence. ==="

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Post-commit: remember to push and open a draft PR if the task is ready for review. ==="

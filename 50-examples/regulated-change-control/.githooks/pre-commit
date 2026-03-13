@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Pre-commit: running quality checks ==="
+python scripts/run_quality_checks.py
+echo "=== Pre-commit: PASSED ==="
