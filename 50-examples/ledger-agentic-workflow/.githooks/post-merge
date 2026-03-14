@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "=== post-merge: === checking whether requirements.txt changed"
+
+if git rev-parse -q --verify ORIG_HEAD >/dev/null 2>&1; then
+  if git diff --quiet ORIG_HEAD HEAD -- requirements.txt; then
+    echo "=== post-merge: === requirements.txt unchanged"
+  else
+    echo "=== post-merge: === requirements.txt changed; reinstall dependencies"
+  fi
+else
+  echo "=== post-merge: === ORIG_HEAD unavailable; unable to compare merge inputs"
+fi

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+message_file="${1:?commit message file is required}"
+message="$(sed -n '1p' "$message_file")"
+pattern='^(feat|fix|docs|chore|refactor|test|style|perf|ci|build|revert)(\([a-z0-9._/-]+\))?: .+'
+
+echo "=== commit-msg: === validating conventional commit message"
+
+if [[ ! "$message" =~ $pattern ]]; then
+  echo "=== commit-msg: === invalid commit message: $message"
+  echo "=== commit-msg: === expected 'type: description' or 'type(scope): description'"
+  exit 1
+fi
+
+echo "=== commit-msg: === commit message is valid"

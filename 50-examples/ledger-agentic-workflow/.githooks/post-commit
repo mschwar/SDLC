@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+set -u
+
+warn() {
+  echo "=== post-commit: === warning: $1"
+}
+
+info() {
+  echo "=== post-commit: === $1"
+}
+
+current_branch="$(git branch --show-current 2>/dev/null || true)"
+if [[ -z "$current_branch" ]]; then
+  info "detached HEAD; skipping push and PR creation"
+  exit 0
+fi
+
+if [[ "$current_branch" == "main" ]]; then
+  info "on main; skipping push and PR creation"
+  exit 0
+fi
+
+if ! git push --set-upstream origin "$current_branch"; then
+  warn "push failed"
+  exit 0
+fi
+
+if ! command -v gh >/dev/null 2>&1; then
+  warn "gh CLI not found; skipping PR creation"
+  exit 0
+fi
+
+if ! gh auth status >/dev/null 2>&1; then
+  warn "gh authentication unavailable; skipping PR creation"
+  exit 0
+fi
+
+if existing_pr="$(gh pr list --head "$current_branch" --json number --limit 1 2>/dev/null)"; then
+  if [[ "$existing_pr" != "[]" ]]; then
+    info "draft PR already exists for $current_branch; skipping creation"
+    exit 0
+  fi
+else
+  warn "could not query existing PRs"
+  exit 0
+fi
+
+if gh pr create --draft --fill >/dev/null 2>&1; then
+  info "draft PR created for $current_branch"
+else
+  warn "draft PR creation failed"
+fi
+
+exit 0
