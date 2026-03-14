@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agentic-sdlc-blueprint.md",
+                "file": "20-reference/CONTEXT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "agentic-sdlc-blueprint"
+              "title": "CONTEXT"
             }
           }
         ]
@@ -185,6 +185,32 @@
   },
   "active": "ae0506d4dffd439f",
   "lastOpenFiles": [
+    "RUNBOOK-ctx.md",
+    "AGENTS-ctx.md",
+    "10-layers/CONTEXT.md",
+    "00-index/CONTEXT.md",
+    "20-reference/CONTEXT.md",
+    "50-examples/ledger-agentic-workflow/templates/pull-request.md",
+    "50-examples/ledger-agentic-workflow/README.md",
+    "50-examples/ledger-agentic-workflow/RUNBOOK.md",
+    "50-examples/ledger-agentic-workflow/AGENTS.md",
+    "50-examples/ledger-agentic-workflow/CONTEXT.md",
+    "50-examples/ledger-agentic-workflow/templates",
+    "50-examples/ledger-agentic-workflow",
+    "rules.md",
+    "state.md",
+    "architecture.md",
+    "00-index/Examples.md",
+    "agentic-sdlc-blueprint.md",
+    "CONTEXT.md",
+    "sdlc-bootstrap-kit/templates/pr-checks.yml",
+    "sdlc-bootstrap-kit/templates/commitlint.config.mjs",
+    "sdlc-bootstrap-kit/templates/GATE_CLOSEOUT.md",
+    "sdlc-bootstrap-kit/templates/AGENTS-SDLC-SECTION.md",
+    "sdlc-bootstrap-kit/templates",
+    "sdlc-bootstrap-kit/bootstrap.sh",
+    "sdlc-bootstrap-kit/README.md",
+    "sdlc-bootstrap-kit",
     "45-playbooks/Architecture and Process Change Playbook.md",
     "30-patterns/Workflow Anti-Patterns.md",
     "55-starter-kits/Monorepo Platform Starter Kit.md",
@@ -192,34 +218,8 @@
     "55-starter-kits/Small Team Service Starter Kit.md",
     "55-starter-kits/Solo Python Starter Kit.md",
     "00-index/Starter Kits.md",
-    "30-patterns/Swarm Orchestration.md",
-    "30-patterns/Machine-readable Specs.md",
-    "30-patterns/Higher-Autonomy Setup.md",
-    "30-patterns/Documentation Drift and Process Erosion.md",
-    "30-patterns/Advanced Failure Modes.md",
-    "20-reference/Adversarial Verification.md",
-    "10-layers/Layer 1 - Architecture and Blueprints.md",
-    "10-layers/Layer 2 - Task Management.md",
-    "10-layers/Layer 3 - The Inner Loop - Code, Test, Commit.md",
-    "10-layers/Layer 4 - Version Control.md",
-    "10-layers/Layer 5 - Pull Requests.md",
-    "10-layers/Layer 6 - Review, CI-CD, and Merge.md",
-    "10-layers/Layer 7 - Deployment and Feedback.md",
     "55-starter-kits/monorepo-platform-starter/scripts",
     "55-starter-kits/monorepo-platform-starter/packages/contracts/contracts",
-    "55-starter-kits/monorepo-platform-starter/packages/contracts",
-    "55-starter-kits/monorepo-platform-starter/packages",
-    "55-starter-kits/monorepo-platform-starter/apps/web_portal",
-    "55-starter-kits/monorepo-platform-starter/apps",
-    "55-starter-kits/monorepo-platform-starter/services/api_service/api_service",
-    "55-starter-kits/monorepo-platform-starter/services/api_service",
-    "55-starter-kits/monorepo-platform-starter/tests",
-    "55-starter-kits/monorepo-platform-starter/services",
-    "00-index/Variants.md",
-    "00-index/Templates.md",
-    "00-index/Reference.md",
-    "00-index/Playbooks.md",
-    "00-index/Patterns.md",
-    "00-index/Layers.md"
+    "55-starter-kits/monorepo-platform-starter/packages/contracts"
   ]
 }
