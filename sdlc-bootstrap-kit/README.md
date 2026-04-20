@@ -1,26 +1,29 @@
-# SDLC Bootstrap Kit
+# Agentic SDLC Bootstrap Kit
 
-This toolkit automatically configures a "bumper rails" Software Development Life Cycle (SDLC) environment for AI-assisted or greenfield repositories. 
+This toolkit turns any standard repository into an Agentic SDLC-compliant framework, allowing you to instantly enforce self-regulating guidelines and templates for multi-agent systems.
 
 ## What it does
 
 When run, the bootstrap script will:
-1. Initialize `package.json` (if missing).
-2. Install `husky` and `@commitlint/config-conventional`.
-3. Set up **Git Hooks**:
-   - `pre-commit`: Blocks committing directly to `main` or `master`.
-   - `pre-push`: Blocks pushing directly to `main` or `master`.
-   - `commit-msg`: Enforces Conventional Commits (e.g., `feat: ...`, `fix: ...`).
-4. Copy a **GitHub Actions PR verification workflow** (`.github/workflows/pr-checks.yml`).
-5. Copy the **Gate Closeout Protocol** (`GATE_CLOSEOUT.md`) into the project root.
+1. **Pull the Agentic Framework Core:** Downloads the Agentic Playbook, Blueprint, `CONTEXT.md`, and the essential `agent-bootstrap-prompt.md` into your repository.
+2. **Install Agent PR Judge:** Adds the `.github/workflows/agent-principle-check.yml` workflow which uses an LLM-as-judge to verify every Pull Request against the playbook principles.
+3. **Configure Local Guardrails:** 
+   - Initializes `package.json` (if missing).
+   - Installs `husky` and `@commitlint/config-conventional`.
+   - Sets up Git hooks to prevent direct commits/pushes to `main` and enforces Conventional Commits.
 
 ## How to use it
 
-1. Navigate to the root of your target repository in your terminal.
-2. Run the bootstrap script from this folder:
-   ```bash
-   /path/to/sdlc-bootstrap-kit/bootstrap.sh
-   ```
-3. Append the agent instructions found in `templates/AGENTS-SDLC-SECTION.md` to your repository's primary AI context file (e.g., `AGENTS.md` or `instructions.md`).
-4. Update your `RUNBOOK.md` to reference the newly added `GATE_CLOSEOUT.md` file.
-5. Commit and push the new setup!
+To bootstrap an existing repository, simply run:
+
+```bash
+curl -sL https://raw.githubusercontent.com/mschwar/SDLC/main/sdlc-bootstrap-kit/bootstrap-sdlc.sh | bash
+```
+
+Alternatively, clone this repository, navigate to the target project, and execute the script directly.
+
+## Post-Bootstrap Steps
+
+1. **Commit Changes:** Run `git add . && git commit -m "build: bootstrap agentic sdlc framework"`.
+2. **Setup Secrets:** Ensure you have added your `GEMINI_API_KEY` to your GitHub repository's Actions Secrets so the PR Principle Check can run.
+3. **Initialize Agent Session:** Give your autonomous agent the `40-templates/agent-bootstrap-prompt.md` at the start of every session!

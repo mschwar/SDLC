@@ -1,0 +1,110 @@
+name: Agent Principle Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [ main ]
+
+jobs:
+  llm-judge:
+    name: Evaluate Code against 15 Principles
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install LLM SDK
+        run: pip install google-genai requests
+
+      - name: Run LLM-as-Judge
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO_NAME: ${{ github.repository }}
+        run: |
+          python -c '
+          import os
+          import sys
+          import subprocess
+          import requests
+          from google import genai
+          
+          api_key = os.environ.get("GEMINI_API_KEY")
+          if not api_key:
+              print("Skipping check: GEMINI_API_KEY not provided.")
+              sys.exit(0)
+              
+          client = genai.Client(api_key=api_key)
+          
+          # Retrieve the diff
+          try:
+              diff = subprocess.check_output(["git", "diff", "origin/main...HEAD"]).decode("utf-8")
+          except Exception as e:
+              print(f"Error getting git diff: {e}")
+              sys.exit(0)
+              
+          # Retrieve the playbook principles
+          try:
+              with open("principles/agentic-playbook/index.md", "r", encoding="utf-8") as f:
+                  principles = f.read()
+          except Exception as e:
+              print(f"Could not read principles file: {e}")
+              sys.exit(1)
+              
+          prompt = f"""
+          You are an expert Agentic SDLC Judge enforcing a self-regulating multi-agent system.
+          Review the following code changes against the 15 core principles of the Agentic SDLC framework.
+          
+          ## Framework Principles
+          {principles}
+          
+          ## Git Diff
+          ```diff
+          {diff}
+          ```
+          
+          Analyze the diff strictly against the principles. 
+          If there are clear violations (e.g., adding a manual human approval step instead of a machine-readable check, skipping the test harness, failing to update documentation/specs), list them with actionable feedback.
+          If the code strictly adheres to all principles, output only the word "PASS".
+          """
+          
+          print("Evaluating diff against agentic principles...")
+          response = client.models.generate_content(
+              model="gemini-2.5-flash",
+              contents=prompt,
+          )
+          
+          result = response.text.strip()
+          print("--- LLM JUDGEMENT ---")
+          print(result)
+          print("---------------------")
+          
+          # Optional: Post PR comment if running in a PR context
+          pr_num = os.environ.get("PR_NUMBER")
+          gh_token = os.environ.get("GITHUB_TOKEN")
+          repo = os.environ.get("REPO_NAME")
+          if pr_num and gh_token and "PASS" not in result.upper():
+              headers = {
+                  "Authorization": f"token {gh_token}",
+                  "Accept": "application/vnd.github.v3+json"
+              }
+              url = f"https://api.github.com/repos/{repo}/issues/{pr_num}/comments"
+              requests.post(url, headers=headers, json={"body": f"### 🤖 Agentic Principle Violation Detected\n\n{result}"})
+          
+          if "PASS" not in result.upper() and "VIOLATION" in result.upper():
+              print("::error::Code changes violate one or more Agentic Principles.")
+              sys.exit(1)
+          '
