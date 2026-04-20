@@ -14,7 +14,11 @@ Agent-first software development lifecycle framework with comprehensive document
 ## Files
 
 - **`.gitattributes`** — Git configuration file that enables automatic line ending normalization for text files across different operating systems
+- **`AGENT-GUIDE.md`** — Operational manual for autonomous agents interacting with and contributing to the repository
 - **`agentic-sdlc-blueprint.md`** — Comprehensive blueprint document for an agent-first software development lifecycle with seven layers, golden path workflow, templates, patterns, and reference materials for implementing autonomous development processes
+- **`CHANGELOG.md`** — Versioned release history of the Agentic SDLC Framework
+- **`CONTRIBUTING.md`** — Guidelines for human operators and autonomous agents to contribute to the repository
+- **`sdlc-cli.py`** — Python CLI tool to load principles and check SDLC framework compliance locally
 
 ## Subdirectories
 
