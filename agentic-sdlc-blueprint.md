@@ -18,6 +18,10 @@ updated: 2026-03-10
 > This note is the high-level map of the vault.
 > Use it to understand the full workflow, then move into the linked layer, reference, pattern, and template notes for implementation detail.
 
+## Agentic Principles Playbook (Mandatory)
+
+This framework is governed by the [Agentic Principles Playbook](principles/agentic-playbook/index.md). This playbook is non-negotiable for every workflow. Every agent must load, internalize, and obey these principles before taking any action.
+
 ## Start Here
 
 - Vault map: [[00-index/Agentic SDLC Vault]]
