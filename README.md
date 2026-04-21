@@ -17,7 +17,8 @@ If you are not a developer and you want to use agents from the CLI, start here:
 
 1. Read [FOUNDER-QUICKSTART.md](FOUNDER-QUICKSTART.md)
 2. Use [RUNBOOKS.md](RUNBOOKS.md) to choose the exact workflow you need
-3. Use [ROADMAP.md](ROADMAP.md) if you want to understand what the product is becoming
+3. Read [V1-GOLDEN-PATH.md](V1-GOLDEN-PATH.md) to see the first supported end-to-end workflow
+4. Use [ROADMAP.md](ROADMAP.md) if you want to understand what the product is becoming
 
 ## What This Repo Gives You Today
 
@@ -30,6 +31,8 @@ Today this repo already includes the core building blocks:
 - bootstrap scripts in `sdlc-bootstrap-kit/`
 - a minimal CLI in [sdlc-cli.py](sdlc-cli.py)
 - a roadmap for turning this into a full repo factory in [ROADMAP.md](ROADMAP.md)
+- a concrete v1 workflow target in [V1-GOLDEN-PATH.md](V1-GOLDEN-PATH.md)
+- a durable v1 scope record in [DECISIONS.md](DECISIONS.md)
 
 What it does not fully provide yet:
 
@@ -58,6 +61,7 @@ Use the smallest surface that matches your need:
 
 - `FOUNDER-QUICKSTART.md`: the shortest path if you are operating agents directly
 - `RUNBOOKS.md`: copy-paste procedures for create, plan, execute, gate, release, and hotfix
+- `V1-GOLDEN-PATH.md`: the exact first workflow this product is being built to support
 - `55-starter-kits/`: ready-to-copy repo skeletons
 - `50-examples/`: runnable examples of the framework in practice
 - `40-templates/`: note and process templates
@@ -76,6 +80,8 @@ Every agent working in this repo should start from the framework rules before do
 
 - [agentic-sdlc-blueprint.md](agentic-sdlc-blueprint.md): canonical operating model
 - [ROADMAP.md](ROADMAP.md): product transformation plan
+- [V1-GOLDEN-PATH.md](V1-GOLDEN-PATH.md): first supported founder workflow
+- [DECISIONS.md](DECISIONS.md): durable product and scope decisions
 - [00-index/Agentic SDLC Vault.md](00-index/Agentic%20SDLC%20Vault.md): vault map
 - [sdlc-bootstrap-kit/README.md](sdlc-bootstrap-kit/README.md): bootstrap harness
 - [CONTRIBUTING.md](CONTRIBUTING.md): contribution guidance
