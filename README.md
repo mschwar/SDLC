@@ -1,30 +1,81 @@
-# Agentic SDLC Framework
+# Agentic SDLC
 
-This repository is an agent-first software development lifecycle framework designed to build self-enforcing, production-ready multi-agent systems. Every agent operating within this repository MUST load and internalize `principles/agentic-playbook/index.md` before initiating any reasoning or tool use. 
+This repository is being shaped into an operator-grade system for one primary use case:
 
-## Features & Tooling
+- a non-technical founder uses CLI agents to create and run a software repo end to end
 
-- **LLM-as-Judge CI/CD:** PRs and commits are automatically evaluated against the 15 Agentic Principles by a GitHub Actions workflow (`.github/workflows/agent-principle-check.yml`).
-- **Reusable Harness:** The [Bootstrap Kit](sdlc-bootstrap-kit/README.md) allows you to apply this agentic SDLC framework and git hooks to any existing repository.
-- **Agent CLI Tool:** Use `sdlc-cli.py` to quickly verify compliance and load principles.
-- **IDE & Framework Integrations:** Includes automated guidelines for Cursor IDE (`.cursor/rules/sdlc.mdc`) and an example CrewAI dynamic skills loader (`50-examples/integrations/crewai_skills_loader.py`).
+The long-term goal is simple:
 
-## How Agents Use This Repo
+- start from intent
+- generate the repo, docs, gates, plans, and agent instructions
+- run a governed SDLC and TDD workflow through agents
+- keep the documentation library callable during execution
 
-- **Mandatory Initialization:** Every agent session must begin by loading the Agent Bootstrap Prompt and reading the core principles.
-- **Workflow Alignment:** Agents design and execute tasks in strict accordance with the canonical rules established in the repository blueprint.
-- **Continuous Self-Checking:** Agents must continuously self-evaluate their reasoning traces against the non-negotiable principles before taking destructive actions.
-- **Template Utilization:** Agents rely on the provided templates to ensure uniform output, comprehensive testing, and standardized PRs.
-- **Context Awareness:** Agents consult context files to maintain awareness of repository boundaries, tools, and environmental constraints.
+## Start Here If You Are The Founder
 
-## Key Resources
+If you are not a developer and you want to use agents from the CLI, start here:
 
-- [Agentic Principles Playbook](principles/agentic-playbook/index.md)
-- [Agentic SDLC Blueprint](agentic-sdlc-blueprint.md)
-- [Repository Context](CONTEXT.md)
-- [Agent Guide](AGENT-GUIDE.md) & [Contributing Guide](CONTRIBUTING.md)
+1. Read [FOUNDER-QUICKSTART.md](FOUNDER-QUICKSTART.md)
+2. Use [RUNBOOKS.md](RUNBOOKS.md) to choose the exact workflow you need
+3. Use [ROADMAP.md](ROADMAP.md) if you want to understand what the product is becoming
 
-## Bootstrap Command
+## What This Repo Gives You Today
 
-To initialize an agent session, apply the following prompt:
-`cat 40-templates/agent-bootstrap-prompt.md`
+Today this repo already includes the core building blocks:
+
+- a blueprint for an agent-first SDLC in [agentic-sdlc-blueprint.md](agentic-sdlc-blueprint.md)
+- a documentation vault with layers, references, patterns, templates, and playbooks
+- starter kits in `55-starter-kits/`
+- worked examples in `50-examples/`
+- bootstrap scripts in `sdlc-bootstrap-kit/`
+- a minimal CLI in [sdlc-cli.py](sdlc-cli.py)
+- a roadmap for turning this into a full repo factory in [ROADMAP.md](ROADMAP.md)
+
+What it does not fully provide yet:
+
+- a single end-to-end command surface
+- a shared planning and gate engine
+- a stateful orchestrator runtime
+- retrieval-backed docs queries
+- a fully proven headless golden path
+
+## Current Product Direction
+
+This repo is moving from "framework and examples" toward "founder-grade repo factory."
+
+The delivery plan is:
+
+1. create founder-facing onboarding and copy-paste runbooks
+2. define a canonical repo manifest and generator
+3. promote planning and gate logic from examples into shared core code
+4. build a real `sdlc` command surface
+5. add runtime retrieval and durable evidence tracking
+6. prove the full workflow end to end by using this repo to create a repo
+
+## Recommended Navigation
+
+Use the smallest surface that matches your need:
+
+- `FOUNDER-QUICKSTART.md`: the shortest path if you are operating agents directly
+- `RUNBOOKS.md`: copy-paste procedures for create, plan, execute, gate, release, and hotfix
+- `55-starter-kits/`: ready-to-copy repo skeletons
+- `50-examples/`: runnable examples of the framework in practice
+- `40-templates/`: note and process templates
+- `45-playbooks/`: framework playbooks and reference procedures
+- `00-index/`: full vault navigation
+
+## If You Are An Agent
+
+Every agent working in this repo should start from the framework rules before doing work:
+
+1. read [principles/agentic-playbook/index.md](principles/agentic-playbook/index.md)
+2. load [40-templates/agent-bootstrap-prompt.md](40-templates/agent-bootstrap-prompt.md)
+3. use [AGENT-GUIDE.md](AGENT-GUIDE.md), [CONTEXT.md](CONTEXT.md), and the canonical docs before acting
+
+## Core Repository Surfaces
+
+- [agentic-sdlc-blueprint.md](agentic-sdlc-blueprint.md): canonical operating model
+- [ROADMAP.md](ROADMAP.md): product transformation plan
+- [00-index/Agentic SDLC Vault.md](00-index/Agentic%20SDLC%20Vault.md): vault map
+- [sdlc-bootstrap-kit/README.md](sdlc-bootstrap-kit/README.md): bootstrap harness
+- [CONTRIBUTING.md](CONTRIBUTING.md): contribution guidance
