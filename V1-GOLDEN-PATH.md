@@ -200,7 +200,7 @@ The first generator and manifest should target the small-team Python service pro
 
 ## Immediate Next Build Implication
 
-With the canonical manifest schema defined, the next implementation task is:
+With manifest loading and baseline generation now in place, the next implementation task is:
 
-- load and validate a v1 repo manifest
-- scaffold the first generator path for the small-team Python service profile
+- normalize founder input into the v1 manifest
+- deepen generated outputs so fewer starter defaults remain after scaffolding

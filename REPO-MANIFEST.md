@@ -97,6 +97,14 @@ The manifest layer is successful when:
 - the generated repo aligns with the small-team Python service golden path
 - the manifest can be validated without human interpretation
 
+## Current Status
+
+The repo now includes:
+
+- manifest loading
+- strict v1 validation
+- a generator path that scaffolds the small-team Python service baseline
+
 ## Immediate Next Build Step
 
-Now that the schema exists, the next implementation step is to add manifest loading and generator scaffolding that can render the v1 repo baseline from this contract.
+The next implementation step is to normalize founder input into this manifest format and deepen the rendering layer so more generated artifacts come directly from structured inputs instead of starter defaults.

@@ -29,7 +29,7 @@ Today this repo already includes the core building blocks:
 - starter kits in `55-starter-kits/`
 - worked examples in `50-examples/`
 - bootstrap scripts in `sdlc-bootstrap-kit/`
-- a minimal CLI in [sdlc-cli.py](sdlc-cli.py)
+- a CLI that can validate the v1 manifest and scaffold a repo baseline in [sdlc-cli.py](sdlc-cli.py)
 - a roadmap for turning this into a full repo factory in [ROADMAP.md](ROADMAP.md)
 - a concrete v1 workflow target in [V1-GOLDEN-PATH.md](V1-GOLDEN-PATH.md)
 - a durable v1 scope record in [DECISIONS.md](DECISIONS.md)
@@ -42,6 +42,11 @@ What it does not fully provide yet:
 - a stateful orchestrator runtime
 - retrieval-backed docs queries
 - a fully proven headless golden path
+
+What it can do now:
+
+- validate the v1 manifest contract
+- scaffold the v1 small-team Python service baseline from that manifest
 
 ## Current Product Direction
 
