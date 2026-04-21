@@ -200,6 +200,7 @@ The first generator and manifest should target the small-team Python service pro
 
 ## Immediate Next Build Implication
 
-The next implementation task after this document is:
+With the canonical manifest schema defined, the next implementation task is:
 
-- define the canonical manifest schema for the small-team Python service profile
+- load and validate a v1 repo manifest
+- scaffold the first generator path for the small-team Python service profile

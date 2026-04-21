@@ -33,6 +33,7 @@ Today this repo already includes the core building blocks:
 - a roadmap for turning this into a full repo factory in [ROADMAP.md](ROADMAP.md)
 - a concrete v1 workflow target in [V1-GOLDEN-PATH.md](V1-GOLDEN-PATH.md)
 - a durable v1 scope record in [DECISIONS.md](DECISIONS.md)
+- a machine-readable generation contract in [REPO-MANIFEST.md](REPO-MANIFEST.md)
 
 What it does not fully provide yet:
 
@@ -62,6 +63,8 @@ Use the smallest surface that matches your need:
 - `FOUNDER-QUICKSTART.md`: the shortest path if you are operating agents directly
 - `RUNBOOKS.md`: copy-paste procedures for create, plan, execute, gate, release, and hotfix
 - `V1-GOLDEN-PATH.md`: the exact first workflow this product is being built to support
+- `REPO-MANIFEST.md`: the manifest contract for generated repos
+- `profiles/`: example profile manifests for supported repo types
 - `55-starter-kits/`: ready-to-copy repo skeletons
 - `50-examples/`: runnable examples of the framework in practice
 - `40-templates/`: note and process templates
@@ -82,6 +85,8 @@ Every agent working in this repo should start from the framework rules before do
 - [ROADMAP.md](ROADMAP.md): product transformation plan
 - [V1-GOLDEN-PATH.md](V1-GOLDEN-PATH.md): first supported founder workflow
 - [DECISIONS.md](DECISIONS.md): durable product and scope decisions
+- [REPO-MANIFEST.md](REPO-MANIFEST.md): manifest contract for repo generation
+- [repo-manifest.schema.json](repo-manifest.schema.json): machine-readable v1 manifest schema
 - [00-index/Agentic SDLC Vault.md](00-index/Agentic%20SDLC%20Vault.md): vault map
 - [sdlc-bootstrap-kit/README.md](sdlc-bootstrap-kit/README.md): bootstrap harness
 - [CONTRIBUTING.md](CONTRIBUTING.md): contribution guidance

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "profile": {
+    "id": "small-team-python-service",
+    "name": "Small-Team Python Service",
+    "starter_kit": "55-starter-kits/small-team-service-starter",
+    "operating_model": "small-team-service"
+  },
+  "repository": {
+    "name": "Acme Release Gateway",
+    "slug": "acme-release-gateway",
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  "product": {
+    "name": "Acme Release Gateway",
+    "promise": "Help a small software team prepare and govern service releases with clear approvals and rollback posture.",
+    "target_user": "operations leads and engineering managers at small SaaS teams",
+    "first_release_outcome": "A founder can submit a release request and get a clear release plan, gates, evidence requirements, and rollback expectations."
+  },
+  "service": {
+    "package_name": "service_app",
+    "module_name": "service_app",
+    "entrypoint": "python -m service_app",
+    "language": "python",
+    "runtime": "python3.12",
+    "interface": "http"
+  },
+  "docs": {
+    "canonical_files": [
+      "README.md",
+      "AGENTS.md",
+      "ARCHITECTURE.md",
+      "SCHEMA.md",
+      "DECISIONS.md",
+      "ROADMAP.md",
+      "RISK_REGISTER.md",
+      "ENVIRONMENTS.md",
+      "SLOS.md"
+    ],
+    "founder_surfaces": [
+      "FOUNDER-QUICKSTART.md",
+      "RUNBOOKS.md"
+    ]
+  },
+  "quality": {
+    "local_checks": [
+      "python scripts/run_quality_checks.py"
+    ],
+    "smoke_test_command": "python scripts/smoke_test.py",
+    "ci_workflow": ".github/workflows/ci.yml",
+    "uses_git_hooks": true
+  },
+  "environments": [
+    {
+      "name": "local",
+      "purpose": "Fast feedback with fixtures and developer-safe execution.",
+      "approval_required": false,
+      "rollback_required": false
+    },
+    {
+      "name": "staging",
+      "purpose": "Runtime validation before production release decisions.",
+      "approval_required": true,
+      "rollback_required": true
+    },
+    {
+      "name": "prod",
+      "purpose": "Customer-facing service runtime with explicit approval and rollback posture.",
+      "approval_required": true,
+      "rollback_required": true
+    }
+  ],
+  "controls": {
+    "review_roles": [
+      "reviewer",
+      "service-owner",
+      "release-manager",
+      "security-reviewer",
+      "architecture-reviewer"
+    ],
+    "supported_gates": [
+      "ci",
+      "staging-validation",
+      "release-approval",
+      "human-approval",
+      "security-review",
+      "architecture-review"
+    ],
+    "release_strategies": [
+      "direct",
+      "staged-rollout",
+      "canary"
+    ]
+  },
+  "constraints": {
+    "data_class": "internal",
+    "compliance_posture": "baseline",
+    "deployment_posture": "founder-approved"
+  }
+}
